@@ -36,33 +36,44 @@ Fixed quote.router.js by adding module.exports.
 
 Corrected static route
 
-# Bug 3
+# Bug 3 & 4
 
 `localhost:5007 says Something went wrong.`
 
 removed extra '}' from GET route call in client.js configuration object
-removed extranneous '/quotes' from server.js router route
+removed extranneous '/quotes' from quote.router.js router route
 
-# Bug 4
+# Bug 5
 `TypeError: quotesFromServer is not iterable`
 
 changed quotelist from object to array in quote.router.js
 
-# Bug 5 
+# Bug 6
 `undefined object elements being rendered to the DOM`
 
-Corrected quote key on line 22 of client.js from text to quote
+Corrected corrected when input became array vice object
 
-# Bug 6
+# Bug 7
 `ReferenceError: quotesList is not defined in quote.router.js`
 
 Correct quotesList to quoteList
 
-# Bug 6
+# Bug 8
 
 `ReferenceError: getQuote is not defined after clicking submit`
 
 Correct getQuote() to getQuotes() in client.js line 53
+
+# Bug 9 
+
+`Inputs in entry form not cleared out after clicking submit button`
+
+Added two lines of code to submitForm() function in client.js to clear input fields
+
+# Bug 10 (Not really a bug but marked as one)
+`client.js <script> in index.html marked as possible bug for exercise with ???`
+
+Code works as is, but added explicitly detailed path as ./scripts/client.js
 
 
 ## Extra Practice (Optional)

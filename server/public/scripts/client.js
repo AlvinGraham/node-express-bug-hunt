@@ -4,7 +4,7 @@ function getQuotes() {
     // Axios GET request (http request for information from the server)
     axios({
         method: 'GET',
-        url: '/quotes'
+        url: '/quotes'  // Error FIXED BUG 3
     }).then((response) => {
         // Code that will run on successful response
         // from the server.
@@ -14,7 +14,7 @@ function getQuotes() {
         let contentDiv = document.querySelector('#content');
         contentDiv.innerHTML = '';
         let i = 0;
-        // ??? Loop over array of quotes and append to the content div
+        // ??? Loop over array of quotes and append to the content div - FIXED BUG 6
         for(let quote of quotesFromServer) {
             // console.log('Quote being rendered:', quote);
             contentDiv.innerHTML += `
@@ -43,7 +43,12 @@ function submitForm(event) {
         text: quote,
         author: author,
     };
-    // ???
+
+    // clear input fields - FIXED BUG 9
+    document.querySelector('#quoteInput').value = null;
+    document.querySelector('#authorInput').value = null;
+
+    // ??? - FIXED BUG 8
     axios({
         method: 'POST',
         url: '/quotes', 

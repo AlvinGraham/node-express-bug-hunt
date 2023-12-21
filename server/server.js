@@ -12,7 +12,7 @@ const quoteRouter = require('./routes/quote.router');
 app.use(express.json());
 app.use('/quotes', quoteRouter);
 
-// ??? Look here for files
+// ??? Look here for files - FIXED Bug 2
 app.use(express.static('server/public'));
 
 app.listen(port, () => {
