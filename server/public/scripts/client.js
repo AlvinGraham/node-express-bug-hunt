@@ -4,7 +4,7 @@ function getQuotes() {
     // Axios GET request (http request for information from the server)
     axios({
         method: 'GET',
-        url: '/quotes}'
+        url: '/quotes'
     }).then((response) => {
         // Code that will run on successful response
         // from the server.
@@ -16,9 +16,10 @@ function getQuotes() {
         let i = 0;
         // ??? Loop over array of quotes and append to the content div
         for(let quote of quotesFromServer) {
+            console.log('Quote being added:', quote);
             contentDiv.innerHTML += `
                 <p>
-                    "${quote.text}" -${quote.author}
+                    "${quote.quote}" -${quote.author}
                 </p>
             `;
             i += 1;

@@ -30,6 +30,30 @@ Fixed `quote.router.js` line 28: switch `app` to `router`. _This is the solution
 
 Fixed quote.router.js by adding module.exports.
 
+## Bug 2
+
+`GET http://localhost:5007/ 404 (Not Found)`
+
+Corrected static route
+
+# Bug 3
+
+`localhost:5007 says Something went wrong.`
+
+removed extra '}' from GET route call in client.js configuration object
+removed extranneous '/quotes' from server.js router route
+
+# Bug 4
+`TypeError: quotesFromServer is not iterable`
+
+changed quotelist from object to array in quote.router.js
+
+# Bug 5 
+`undefined object elements being rendered to the DOM`
+Corrected quote key on line 22 of client.js from text to quote
+
+
+
 ## Extra Practice (Optional)
 
 Complete the JS debugging exercises at:
