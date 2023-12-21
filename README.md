@@ -26,7 +26,9 @@ Fixed `quote.router.js` line 28: switch `app` to `router`. _This is the solution
 
 ### Bug 1
 
-...
+`throw new TypeError('Router.use() requires a middleware function but got a ' + gettype(fn))`
+
+Fixed quote.router.js by adding module.exports.
 
 ## Extra Practice (Optional)
 

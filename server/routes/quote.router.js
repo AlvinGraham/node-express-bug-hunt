@@ -25,3 +25,4 @@ router.post('/', (req, res) => {
 // PUT request update information
 
 // ???
+module.exports = router;
