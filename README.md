@@ -50,8 +50,19 @@ changed quotelist from object to array in quote.router.js
 
 # Bug 5 
 `undefined object elements being rendered to the DOM`
+
 Corrected quote key on line 22 of client.js from text to quote
 
+# Bug 6
+`ReferenceError: quotesList is not defined in quote.router.js`
+
+Correct quotesList to quoteList
+
+# Bug 6
+
+`ReferenceError: getQuote is not defined after clicking submit`
+
+Correct getQuote() to getQuotes() in client.js line 53
 
 
 ## Extra Practice (Optional)

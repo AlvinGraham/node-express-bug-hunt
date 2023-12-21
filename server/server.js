@@ -10,8 +10,7 @@ const quoteRouter = require('./routes/quote.router');
 // Allow req.body
 // Alternative to body parser when using Axios
 app.use(express.json());
-
-app.use('/', quoteRouter);
+app.use('/quotes', quoteRouter);
 
 // ??? Look here for files
 app.use(express.static('server/public'));

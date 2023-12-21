@@ -16,10 +16,10 @@ function getQuotes() {
         let i = 0;
         // ??? Loop over array of quotes and append to the content div
         for(let quote of quotesFromServer) {
-            console.log('Quote being added:', quote);
+            // console.log('Quote being rendered:', quote);
             contentDiv.innerHTML += `
                 <p>
-                    "${quote.quote}" -${quote.author}
+                    "${quote.text}" -${quote.author}
                 </p>
             `;
             i += 1;
@@ -50,7 +50,7 @@ function submitForm(event) {
         data: quoteForServer
     }).then((response) => {
         console.log(response);
-        getQuote();
+        getQuotes();
     }).catch((error) => {
         console.log(error);
         alert('Something went wrong.');
